@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IGStepperView" customModule="Caristocrat" customModuleProvider="target">
+            <connections>
+                <outlet property="StepDownButton" destination="VmZ-rX-96p" id="qmm-Rb-CBB"/>
+                <outlet property="StepUpButton" destination="Ssx-5o-nRH" id="nsE-Lw-fF8"/>
+                <outlet property="countTextField" destination="2DV-CR-I7X" id="RhH-yA-0i0"/>
+                <outlet property="view" destination="iN0-l3-epB" id="IOt-f1-qaE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="156" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmZ-rX-96p">
+                    <rect key="frame" x="0.0" y="5" width="35" height="35"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" image="circle---1"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.85718197846899225" green="0.85718197846899225" blue="0.85718197846899225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="stepDown:" destination="-1" eventType="touchDown" id="kAz-3I-rqU"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2DV-CR-I7X">
+                    <rect key="frame" x="40" y="5" width="76" height="35"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.8571819785" green="0.8571819785" blue="0.8571819785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssx-5o-nRH">
+                    <rect key="frame" x="121" y="5" width="35" height="35"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="circle+2"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.8571819785" green="0.8571819785" blue="0.8571819785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="stepUp:" destination="-1" eventType="touchDown" id="znI-hH-hRL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Ssx-5o-nRH" firstAttribute="leading" secondItem="2DV-CR-I7X" secondAttribute="trailing" constant="5" id="0Or-to-frH"/>
+                <constraint firstItem="VmZ-rX-96p" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0tB-Jx-2nT"/>
+                <constraint firstAttribute="trailing" secondItem="Ssx-5o-nRH" secondAttribute="trailing" id="DCT-Gg-1Kd"/>
+                <constraint firstItem="2DV-CR-I7X" firstAttribute="leading" secondItem="VmZ-rX-96p" secondAttribute="trailing" constant="5" id="Ean-q9-iEk"/>
+                <constraint firstItem="2DV-CR-I7X" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ghe-K4-aEa"/>
+                <constraint firstItem="VmZ-rX-96p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ok2-Tu-RH1"/>
+                <constraint firstItem="VmZ-rX-96p" firstAttribute="height" secondItem="Ssx-5o-nRH" secondAttribute="height" id="Xsc-DK-JYz"/>
+                <constraint firstItem="VmZ-rX-96p" firstAttribute="width" secondItem="Ssx-5o-nRH" secondAttribute="width" id="gq5-zf-aQJ"/>
+                <constraint firstItem="VmZ-rX-96p" firstAttribute="width" secondItem="Ssx-5o-nRH" secondAttribute="height" id="jT7-da-WOh"/>
+                <constraint firstItem="Ssx-5o-nRH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="leM-bq-cu1"/>
+                <constraint firstItem="2DV-CR-I7X" firstAttribute="height" secondItem="Ssx-5o-nRH" secondAttribute="height" id="s0o-Ee-i3u"/>
+                <constraint firstItem="VmZ-rX-96p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="uck-sv-pkR"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-62" y="-442.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="circle+2" width="15" height="15"/>
+        <image name="circle---1" width="15" height="15"/>
+    </resources>
+</document>
